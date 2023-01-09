@@ -13,10 +13,18 @@ function App() {
             <Button variant="success" onClick={() => setCount(count + 1)}>
               Increase
             </Button>{" "}
-            <Button variant="danger" onClick={() => setCount(count - 1)}>
+            <Button
+              variant="danger"
+              onClick={() => setCount(count - 1)}
+              disabled={count === 0}
+            >
               Decrease
             </Button>{" "}
-            <Button variant="secondary" onClick={() => setCount(0)}>
+            <Button
+              variant="secondary"
+              onClick={() => setCount(0)}
+              disabled={count === 0}
+            >
               Reset
             </Button>{" "}
           </div>
