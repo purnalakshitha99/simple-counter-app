@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container my-5">
+      <div className="card text-center my-5">
+        <div className="card-body">
+          <h1>Counter App</h1>
+          <div className="my-5">
+            <h2 className="my-5">{count}</h2>
+            <Button variant="success" onClick={() => setCount(count + 1)}>
+              Increase
+            </Button>{" "}
+            <Button variant="danger" onClick={() => setCount(count - 1)}>
+              Decrease
+            </Button>{" "}
+            <Button variant="secondary" onClick={() => setCount(0)}>
+              Reset
+            </Button>{" "}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
