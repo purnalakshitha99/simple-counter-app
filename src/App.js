@@ -20,21 +20,25 @@ function App() {
             >
               Decrease
             </Button>{" "}
-            <Button
-              m-2
-              variant="primary"
-              onClick={() => setCount(count * 2)}
-              disabled={count === 0}
-            >
-              2 x
-            </Button>{" "}
-            <Button
-              variant="danger"
-              onClick={() => setCount(count / 2)}
-              disabled={count === 0}
-            >
-              /
-            </Button>{" "}
+            <div className="my-5">
+              <Button
+                m-2
+                variant="primary"
+                onClick={() => setCount(count * 2)}
+                disabled={count === 0}
+              >
+                2 x
+              </Button>{" "}
+            </div>
+            <div className="my-5">
+              <Button
+                variant="danger"
+                onClick={() => setCount(count / 2)}
+                disabled={count === 0}
+              >
+                /
+              </Button>{" "}
+            </div>
             <Button
               variant="secondary"
               onClick={() => setCount(0)}
