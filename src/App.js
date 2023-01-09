@@ -29,6 +29,13 @@ function App() {
               2 x
             </Button>{" "}
             <Button
+              variant="danger"
+              onClick={() => setCount(count / 2)}
+              disabled={count === 0}
+            >
+              /
+            </Button>{" "}
+            <Button
               variant="secondary"
               onClick={() => setCount(0)}
               disabled={count === 0}
