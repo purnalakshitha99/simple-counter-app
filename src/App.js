@@ -21,6 +21,14 @@ function App() {
               Decrease
             </Button>{" "}
             <Button
+              m-2
+              variant="primary"
+              onClick={() => setCount(count * 2)}
+              disabled={count === 0}
+            >
+              2 x
+            </Button>{" "}
+            <Button
               variant="secondary"
               onClick={() => setCount(0)}
               disabled={count === 0}
